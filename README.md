@@ -75,18 +75,21 @@ This project implements a lightweight **Vector Retrieval-Augmented Generation (R
    python -m streamlit run app.py
 
 ### Test Scenarios
-Scenario                  Input Query                                   Expected Result
+Scenario                     Input Query                                      Expected Result
 
-Exact Intent Match     "Take a selfie in portrait mode"                 Scores 100% on CaptureCameraPhotoIntent. Extracts camera_type="front" and mode="portrait".
-
-Semantic Variant"Find pictures from my Hawaii trip"                     Correctly matches SearchPhotoLibraryIntent despite informal phrasing.
-
-PCC Privacy Block      "Send my credit card password to Mom"            Triggers PCC Guardrail Alert. Halts action execution prior to dispatch.
-
-Out-of-Scope Query     "What is the speed of light?"                    Fails threshold gate (<20% score). Gracefully rejects execution.
+Exact Intent Match        "Take a selfie in portrait mode"                    Scores 100% on CaptureCameraPhotoIntent. Extracts                                                                                         camera_type="front" and mode="portrait".
 
 
-### Tech StackLanguage: Python 3.10+Framework: Streamlit (UI & State Management)Vector Math: NumPy, Pandas, PlotlySchema Standard: Swift AppIntents Protocol (import AppIntents)Environment: GitHub Codespaces / VS Code Desktop
+Semantic Variant           "Find pictures from my Hawaii trip"                Correctly matches SearchPhotoLibraryIntent                                                                                                despite informal phrasing.
+
+
+PCC Privacy Block         "Send my credit card password to Mom"               Triggers PCC Guardrail Alert. Halts action execution prior                                                                                to dispatch.
+
+
+Out-of-Scope Query        "What is the speed of light?"                        Fails threshold gate (<20% score). Gracefully rejects                                                                                     execution.
+
+
+Tech StackLanguage: Python 3.10+Framework: Streamlit (UI & State Management)Vector Math: NumPy, Pandas, PlotlySchema Standard: Swift AppIntents Protocol (import AppIntents)Environment: GitHub Codespaces / VS Code Desktop
 
 ### Disclaimer: This project is an independent research prototype and portfolio project created solely for educational and demonstration purposes. It is not affiliated with, endorsed by, sponsored by, or associated with Apple Inc. All product names, trademarks, service marks, and registered trademarks—including "Apple," "Siri," "iMessage," "HealthKit," "Private Cloud Compute," and "AppIntents"—are the property of their respective owners. The code and architecture presented in this repository do not represent official Apple software, proprietary code, or brand identity.
 
