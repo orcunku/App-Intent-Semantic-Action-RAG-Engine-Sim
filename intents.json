@@ -1,0 +1,122 @@
+[
+  {
+    "id": "CaptureCameraPhotoIntent",
+    "app": "Camera",
+    "domain": "Media",
+    "description": "Capture a photo or video using specified camera and mode settings.",
+    "parameters": [
+      {
+        "name": "camera_type",
+        "type": "String",
+        "required": true
+      },
+      {
+        "name": "mode",
+        "type": "String",
+        "required": true
+      }
+    ],
+    "sample_prompts": [
+      "Take a photo",
+      "Capture a picture",
+      "Take a selfie in portrait mode"
+    ],
+    "pcc_policy": "Allow-Local"
+  },
+  {
+    "id": "SearchPhotoLibraryIntent",
+    "app": "Photos",
+    "domain": "Media",
+    "description": "Search user photos by date, location, persons, or semantic query.",
+    "parameters": [
+      {
+        "name": "location",
+        "type": "String",
+        "required": false
+      },
+      {
+        "name": "date_range",
+        "type": "String",
+        "required": false
+      }
+    ],
+    "sample_prompts": [
+      "Find pictures from Hawaii",
+      "Show photos from last summer",
+      "Search images"
+    ],
+    "pcc_policy": "Allow-Local"
+  },
+  {
+    "id": "SendiMessageIntent",
+    "app": "Messages",
+    "domain": "Communication",
+    "description": "Compose and dispatch an encrypted text or multimedia message via iMessage.",
+    "parameters": [
+      {
+        "name": "recipient",
+        "type": "String",
+        "required": true
+      },
+      {
+        "name": "body",
+        "type": "String",
+        "required": true
+      }
+    ],
+    "sample_prompts": [
+      "Send a message to Mom",
+      "Text John asking about dinner",
+      "Send SMS"
+    ],
+    "pcc_policy": "Restricted-Sanitize"
+  },
+  {
+    "id": "CreateCalendarEventIntent",
+    "app": "Calendar",
+    "domain": "Calendar",
+    "description": "Schedule a new calendar event with date, time, title, and optional attendees.",
+    "parameters": [
+      {
+        "name": "title",
+        "type": "String",
+        "required": true
+      },
+      {
+        "name": "start_time",
+        "type": "String",
+        "required": true
+      }
+    ],
+    "sample_prompts": [
+      "Schedule a meeting tomorrow at 3 PM",
+      "Create a calendar event for dentist appointment",
+      "Add event"
+    ],
+    "pcc_policy": "Allow-Local"
+  },
+  {
+    "id": "LogHealthMetricIntent",
+    "app": "Health",
+    "domain": "Health",
+    "description": "Log physical health stats, workouts, or water intake to HealthKit.",
+    "parameters": [
+      {
+        "name": "metric_type",
+        "type": "String",
+        "required": true
+      },
+      {
+        "name": "value",
+        "type": "String",
+        "required": true
+      }
+    ],
+    "sample_prompts": [
+      "Log 500ml of water",
+      "Record a 30 minute running workout",
+      "Save health data"
+    ],
+    "pcc_policy": "Encrypted-Local-Only"
+  }
+]
